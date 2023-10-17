@@ -1,0 +1,54 @@
+.full-width-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .full-width-image {
+    width: 50%;
+    height: 500px; /* Adjust the percentage as needed */
+  }
+
+  .card {
+    /* margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease; */
+    border-top: 2px solid #ff00ff;
+    border-right: 1px dashed #00ffff;
+    border-bottom: 3px dotted #ffff00;
+    border-left: 1px solid #0000ff;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  /* @keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.center-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+}
+
+
+.animate-slide {
+    animation: slideIn 1s ease-in-out;
+} */
+
+.carousel-item img {
+  max-height: 600px;  /*Adjust the desired height */
+  object-fit: cover;
+} 
+
+

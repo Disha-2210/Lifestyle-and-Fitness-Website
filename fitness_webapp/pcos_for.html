@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<link rel="stylesheet" href="styling.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="container">
+<form action="#" class="form">
+	<div class="progressbar">
+		<div class="progress" id="progress"></div>
+		<div class="progress-step progress-step-active"></div>
+		<div class="progress-step"></div>
+		<div class="progress-step"></div>
+		<div class="progress-step"></div>
+		<div class="progress-step"></div>
+		<div class="progress-step"></div>
+	</div>
+	<div class="form-step form-step-active">
+		<div class="input-group">
+			<h2 class="text-center"> ANSWER THESE QUESTIONS AND KNOW YOUR HEALTH</h2>
+			<br/>
+      <h3> How often do you eat fried food??</h3>
+   <input type="radio" id="often" name="fav_language" value="often">
+ <label for="often">very often</label><br>
+ <input type="radio" id="sometimes" name="fav_language" value="sometimes">
+ <label for="sometimes">sometimes</label><br>
+ <input type="radio" id="rare" name="fav_language" value="rare">
+ <label for="rare">rarely</label>
+</div>
+<div class="">
+	<a href="#" class="btn btn-next width-50 ml-auto">NEXT</a>
+</div>
+</div>
+<div class="form-step">
+		<div class="input-group">
+			<h2> How often do you eat saturated fats such as butter , cheese etc ??</h2>
+   <input type="radio" id="often" name="fav_language" value="often">
+ <label for="often">very often</label><br>
+ <input type="radio" id="sometimes" name="fav_language" value="sometimes">
+ <label for="sometimes">sometimes</label><br>
+ <input type="radio" id="rare" name="fav_language" value="rare">
+ <label for="rare">rarely</label>
+ <br/>
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<a href="#" class="btn btn-next">NEXT</a>
+</div>
+</div>
+<div class="form-step ">
+		<div class="input-group">
+			<h2>How often do you eat Red meat ??</h2>
+   <input type="radio" id="often" name="fav_language" value="often">
+ <label for="often">very often</label><br>
+ <input type="radio" id="sometimes" name="fav_language" value="sometimes">
+ <label for="sometimes">sometimes</label><br>
+ <input type="radio" id="rare" name="fav_language" value="rare">
+ <label for="rare">rarely</label>
+ <br/>
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<a href="#" class="btn btn-next">NEXT</a>
+</div>
+</div>
+<div class="form-step">
+		<div class="input-group">
+		<h2> How often do you eat processed snacks like cookies,cakes etc??</h2>
+   <input type="radio" id="often" name="fav_language" value="often">
+ <label for="often">very often</label><br>
+ <input type="radio" id="sometimes" name="fav_language" value="sometimes">
+ <label for="sometimes">sometimes</label><br>
+ <input type="radio" id="rare" name="fav_language" value="rare">
+ <label for="rare">rarely</label>
+ <br/>
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<a href="#" class="btn btn-next">NEXT</a>
+</div>
+</div>
+<div class="form-step">
+		<div class="input-group">
+			<h2> How often do you consume sugary beverages such as sodas,cold drinks ,teas etc ??</h2>
+   <input type="radio" id="often" name="fav_language" value="often">
+ <label for="often">very often</label><br>
+ <input type="radio" id="sometimes" name="fav_language" value="sometimes">
+ <label for="sometimes">sometimes</label><br>
+ <input type="radio" id="rare" name="fav_language" value="rare">
+ <label for="rare">rarely</label>
+ <br/>
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<a href="#" class="btn btn-next">NEXT</a>
+</div>
+</div>
+<div class="form-step">
+		<div class="input-group">
+		<h2> How often do you consume refined flour, white bread, white rice etc ??</h2>
+   <input type="radio" id="often" name="fav_language" value="often">
+ <label for="often">very often</label><br>
+ <input type="radio" id="sometimes" name="fav_language" value="sometimes">
+ <label for="sometimes">sometimes</label><br>
+ <input type="radio" id="rare" name="fav_language" value="rare">
+ <label for="rare">rarely</label>
+ <br/> 
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<button type="button" class="submit_btn" onclick="findMostSelectedRadioButton()">
+        SUBMIT
+    </button>
+    <br>
+    <script src="mainpcos.js"></script>
+        <script>
+        function findMostSelectedRadioButton() {
+            var forms = document.getElementsByTagName("form");
+            var radioCounts = {};
+
+            // Iterate over the forms
+            for (var i = 0; i < forms.length; i++) {
+                var form = forms[i];
+                var radios = form.querySelectorAll("input[type='radio']");
+
+                // Count the selected radio buttons
+                for (var j = 0; j < radios.length; j++) {
+                    if (radios[j].checked) {
+                        var value = radios[j].value;
+                        if (radioCounts[value]) {
+                            radioCounts[value]++;
+                        } else {
+                            radioCounts[value] = 1;
+                        }
+                    }
+                }
+            }
+
+            var mostSelectedRadioButton = null;
+            var maxCount = 0;
+
+            // Find the most selected radio button
+            for (var radio in radioCounts) {
+                if (radioCounts[radio] > maxCount) {
+                    mostSelectedRadioButton = radio;
+                    maxCount = radioCounts[radio];
+                }
+            }
+
+            // Display the most selected radio button
+            if (mostSelectedRadioButton=="often") {
+                alert("AT HIGHT RISK!!\n THERE IS A HIGH PROBABILITY OF BEING DIAGNOSED WITH PCOS/PCOD IN THE NEAR FUTURE!!START TAKING PRECAUTIONS!!!");
+
+            }
+            else if (mostSelectedRadioButton=="sometimes") {
+            	alert("BORDERLINE!!TIME TO REDUCE YOUR UNHEALTHY FOOD INTAKE IN ORDER TO AVOID PCOS/PCOD IN THE FUTURE ");
+            }
+             else if(mostSelectedRadioButton=="rare"){
+                alert("NO RISK!!! CONTINUE WITH YOUR NUTRITION INTAKE TO STAY HEALTHY!!!");
+            }
+            else{
+            	alert("You haven't selected any option!!!");
+            }
+        }
+    </script>
+
+</div> 
+</div>
+</div>
+</form>
+</body>
+</html>

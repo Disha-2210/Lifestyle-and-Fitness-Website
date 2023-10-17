@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<script src="script.js" defer></script>
+<style>
+*{
+  margin:0;
+  padding:0;
+  font-family:sans-serif;
+}
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("image/check.jpg");
+  background-position:center;
+  background-size:cover;
+}
+.container {
+  width:500px;
+  height:450px;
+  margin: 8% auto;
+  background: linear-gradient( #134E5E, #71B280);
+  border-radius: 5px;
+  position: relative;
+  overflow: :hidden;
+}
+h2{
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+}
+h3
+{
+  font-family: Tahoma;
+  font-weight: bold;
+  color:floralwhite ;
+}
+.text-center{
+  text-align:center;
+}
+
+*,
+*::before,
+*::after{
+box-sizing: :border-box;
+}
+ body{
+  font-family: Montserrat, "Segoe UI", Tahoma;
+  margin:0;
+  display: grid;
+  place-items: center;
+  min-height:100vh;
+ }
+ input{
+  display: block;
+  width: 100%;
+  padding: 0.75 rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+ }
+ label{
+  font-family: Tahoma;
+  font-weight: bold;
+  color: mintcream ;
+ }
+ .width-50{
+  width:50%;
+ }
+ .ml-auto{
+  margin-left: auto;
+ }
+.progressbar{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+}
+.progressbar::before, .progress{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+.progress{
+  background: linear-gradient(to right, #000000,#006400);
+  width: 0%;
+  transition: 0.3s;
+
+}
+.progress-step{
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius:50%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.progress-step::before{
+  counter-increment: step;
+  content: counter(step);
+}
+.progress-step-active{
+  background: linear-gradient(to right, #F5FFFA,#008080);
+  color: #f3f3f3 ;
+
+}
+ .form{
+  width: clamp(320px , 30%, 430px);
+  margin:0 auto;
+  /*border:1px solid #ccc;
+  border-radius: 0.35 rem;
+ */ padding:1.5rem;
+ }
+ .form-step{
+  display: none;
+  transform-origin:top;
+  animation: animate 0.5s;
+ }
+ .form-step-active{
+  display: block;
+ }
+ .input-group{
+  margin: 2rem 0;
+ }
+ @keyframes animate{
+  from{
+    transform: scale(1,0);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1,1);
+    opacity: 1;
+  }
+}
+
+ .btns-group{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+ }
+ .btn{
+  text-align: center;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  border-radius: 30px;
+  width: 100%;
+  height: 15px;
+  margin : 30px auto;
+  background : linear-gradient(to right, #000000,#008080);
+  border: 0;
+  outline:none;
+  color: #fff;
+  cursor : pointer;
+  transition: 0.3s
+}
+.btn:hover{
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #e74c3c;
+}
+.submit_btn{
+  text-align: center;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  border-radius: 30px;
+  width: 100%;
+  height: 30px;
+  margin : 30px auto;
+  background : linear-gradient(to right, #000000,#008080);
+  border: 0;
+  outline:none;
+  color: #fff;
+  cursor : pointer;
+  transition: 0.3s
+}
+#alertBox {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-display: fallback;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  bottom: 60%;
+  left: 40%;
+  width: 20%;
+  height: 15%;
+  background: linear-gradient(#00b09b,#96c93d);
+  border-radius: 10px;
+  padding: 30px;
+  z-index: 2;
+  color: whitesmoke;
+}
+
+#alertClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+<form action="#" class="form">
+	<div class="progressbar">
+		<div class="progress" id="progress"></div>
+		<div class="progress-step progress-step-active"></div>
+		<div class="progress-step"></div>
+		<div class="progress-step"></div>
+		<div class="progress-step"></div>
+		<div class="progress-step"></div>
+		<div class="progress-step"></div>
+	</div>
+	<div class="form-step form-step-active">
+		<div class="input-group">
+			<h2 class="text-center">KNOW IF YOU ARE EXPERIENCING THESE EARLY SYMPTOMS OF THYROID</h2>
+			<br/>
+      <h3> Do you feel tired or lack energy even after getting enough sleep??</h3>
+      <br/>
+   <input type="radio" id="yes" name="fav_language" value="yes">
+ <label for="yes">YES</label><br>
+ <input type="radio" id="no" name="fav_language" value="no">
+ <label for="no">NO</label><br>
+</div>
+<div class="">
+	<a href="#" class="btn btn-next width-50 ml-auto">NEXT</a>
+</div>
+</div>
+<div class="form-step">
+		<div class="input-group">
+			<h2>Did you have a sudden weight loss or weight gain that cannot be explained by changes in diet or exercise??</h2>
+             <br/>
+   <input type="radio" id="yes" name="fav_language" value="yes">
+ <label for="yes">YES</label><br>
+ <input type="radio" id="no" name="fav_language" value="no">
+ <label for="no">NO</label><br>
+ <br/>
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<a href="#" class="btn btn-next">NEXT</a>
+</div>
+</div>
+<div class="form-step ">
+		<div class="input-group">
+			<h2>Do you have sleep disturbances, insomnia, or excessive sleepiness??</h2>
+             <br/>
+   <input type="radio" id="yes" name="fav_language" value="yes">
+ <label for="yes">YES</label><br>
+ <input type="radio" id="no" name="fav_language" value="no">
+ <label for="no">NO</label><br>
+ <br/>
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<a href="#" class="btn btn-next">NEXT</a>
+</div>
+</div>
+<div class="form-step">
+		<div class="input-group">
+		<h2>Do you have muscle weakness or joint pain??</h2>
+         <br/>
+   <input type="radio" id="yes" name="fav_language" value="yes">
+ <label for="yes">YES</label><br>
+ <input type="radio" id="no" name="fav_language" value="no">
+ <label for="no">NO</label><br>
+ <br/>
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<a href="#" class="btn btn-next">NEXT</a>
+</div>
+</div>
+<div class="form-step">
+		<div class="input-group">
+			<h2>Do you experience increased or decreased heart rate??</h2>
+             <br/>
+   <input type="radio" id="yes" name="fav_language" value="yes">
+ <label for="yes">YES</label><br>
+ <input type="radio" id="no" name="fav_language" value="no">
+ <label for="no">NO</label><br>
+ <br/>
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<a href="#" class="btn btn-next">NEXT</a>
+</div>
+</div>
+<div class="form-step">
+		<div class="input-group">
+		<h2>Do you have changes in the menstrual cycle like lighter or heavier periods, or irregular cycles??</h2> <br/>
+   <input type="radio" id="yes" name="fav_language" value="yes">
+ <label for="yes">YES</label><br>
+ <input type="radio" id="no" name="fav_language" value="no">
+ <label for="no">NO</label><br>
+ <br/>
+</div>
+<div class="btns-group">
+	<a href="#" class="btn btn-prev">PREVIOUS</a>
+	<button type="button" class="submit_btn" onclick="findMostSelectedRadioButton()">
+        SUBMIT
+    </button>
+    <br>
+    <script src="mainpcos.js"></script>
+        <script>
+        function findMostSelectedRadioButton() {
+            var forms = document.getElementsByTagName("form");
+            var radioCounts = {};
+
+            // Iterate over the forms
+            for (var i = 0; i < forms.length; i++) {
+                var form = forms[i];
+                var radios = form.querySelectorAll("input[type='radio']");
+
+                // Count the selected radio buttons
+                for (var j = 0; j < radios.length; j++) {
+                    if (radios[j].checked) {
+                        var value = radios[j].value;
+                        if (radioCounts[value]) {
+                            radioCounts[value]++;
+                        } else {
+                            radioCounts[value] = 1;
+                        }
+                    }
+                }
+            }
+
+            var mostSelectedRadioButton = null;
+            var maxCount = 0;
+
+            // Find the most selected radio button
+            for (var radio in radioCounts) {
+                if (radioCounts[radio] > maxCount) {
+                    mostSelectedRadioButton = radio;
+                    maxCount = radioCounts[radio];
+                }
+            }
+
+            // Display the most selected radio button
+            if (mostSelectedRadioButton=="yes") {
+                alert("THESE MIGHT BE THE EARLY SYMPTOMS OF THYROID!!!CONSULT THE DOCTOR!!!");
+
+            }
+            else if (mostSelectedRadioButton=="no") {
+            	alert("YOU ARE NOT EXPERIENCING ANY SYMPTOMS OF THYROID AS OF NOW!!!");
+            }
+            else{
+            	alert("You haven't selected any option!!!");
+            }
+        }
+    </script>
+
+</div> 
+</div>
+</div>
+</form>
+</body>
+</html>

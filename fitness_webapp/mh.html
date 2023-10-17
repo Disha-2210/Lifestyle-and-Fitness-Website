@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gallerystyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <style>
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Teko:700);
+.text-center{
+  color:whitesmoke;
+}
+body{
+  background: linear-gradient(#C04848,#480048);
+}
+.snip1543 {
+  background-color: #fff;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  margin: 10px;
+  max-width: 315px;
+  min-width: 230px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.snip1543 *,
+.snip1543 *:before,
+.snip1543 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1543 img {
+  backface-visibility: hidden;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.snip1543:before,
+.snip1543:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: rosybrown;
+  opacity: 0.5;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1543:before {
+  -webkit-transform: skew(30deg) translateX(-80%);
+  transform: skew(30deg) translateX(-80%);
+}
+
+.snip1543:after {
+  -webkit-transform: skew(-30deg) translateX(-70%);
+  transform: skew(-30deg) translateX(-70%);
+}
+
+.snip1543 figcaption {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  bottom: 0;
+  padding: 25px 40% 25px 20px;
+}
+
+.snip1543 figcaption:before,
+.snip1543 figcaption:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:mediumpurple;
+  box-shadow: yellowgreen;
+  content: '';
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.snip1543 figcaption:before {
+  -webkit-transform: skew(30deg) translateX(-100%);
+  transform: skew(30deg) translateX(-100%);
+}
+
+.snip1543 figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(-90%);
+  transform: skew(-30deg) translateX(-90%);
+}
+
+.snip1543 h3,
+.snip1543 p {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+
+.snip1543 h3 {
+  font-family: 'Teko', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.snip1543 p {
+  font-size: 0.9em;
+}
+
+.snip1543 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1543:hover h3,
+.snip1543.hover h3,
+.snip1543:hover p,
+.snip1543.hover p {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 0.9;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.snip1543:hover:before,
+.snip1543.hover:before {
+  -webkit-transform: skew(30deg) translateX(-20%);
+  transform: skew(30deg) translateX(-20%);
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.snip1543:hover:after,
+.snip1543.hover:after {
+  -webkit-transform: skew(-30deg) translateX(-10%);
+  transform: skew(-30deg) translateX(-10%);
+}
+
+.snip1543:hover figcaption:before,
+.snip1543.hover figcaption:before {
+  -webkit-transform: skew(30deg) translateX(-40%);
+  transform: skew(30deg) translateX(-40%);
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.snip1543:hover figcaption:after,
+.snip1543.hover figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(-30%);
+  transform: skew(-30deg) translateX(-30%);
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.snip1543{
+  display: inline-block;
+}
+      *{
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      h1
+      {
+        color: maroon;
+        text-align: center;
+      }
+      a{
+        color:white;
+        position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size:18px;
+      }
+      .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    </style>
+
+    <title>GALLERY</title>
+</head>
+<body>
+  <h1 class="text-center">
+    📸SOME TIPS FOR MENSTRUAL HYGIENE
+  </h1>
+<figure class="snip1543">
+  <img src="image/me_intro.jpg" alt="tiger image"/>
+  <figcaption>
+    <h3>INTRODUCTION TO MENSTRUATION</h3>
+    <p>Menstruation, or period, is normal vaginal bleeding that occurs as part of a woman's monthly cycle. The menstrual blood is partly blood and partly tissue from inside the uterus.
+  </figcaption> 
+</figure>
+
+<figure class="snip1543"><img src="image/hyg.jpg" alt="crocodile image" />
+  <figcaption>
+    <h3>MENSTRUAL HYGIENE</h3>
+    <p>Good menstrual health and hygiene practices can prevent infections, reduce odors, and help you stay comfortable during your period.</p>
+  </figcaption>
+</figure>
+
+
+<figure class="snip1543">
+  <img src="image/risk.jpg" alt="giraffe image" />
+  <figcaption>
+    <h3>HEALTH RISKS DUE TO POOR HYGIENE</h3>
+    <p>Poor menstrual hygiene, however, can pose serious health risks, like reproductive and urinary tract infections which can result in future infertility and birth complications.</p>
+  </figcaption>
+</figure>
+
+<figure class="snip1543"><img src="image/sp.jpg" alt="lion image" />
+  <figcaption>
+    <h3>TIP 1</h3>
+    <p>Uuse sanitary pads.They are also known as sanitary napkins, are absorbent pads worn on the underwear during menstruation to absorb the blood and help women have a hygienic period.</p>
+  </figcaption>
+</figure>
+
+<figure class="snip1543">
+  <img src="image/prod.jpg" alt="bear image" />
+  <figcaption>
+    <h3>TIP 2</h3>
+    <p>Change your menstrual products regularly. Trapped moisture provides a breeding ground for bacteria and fungi. Wearing a pad or period underwear for too long can lead to a rash or an infection.</p>
+  </figcaption>
+</figure>
+
+<figure class="snip1543">
+  <img src="image/unscent.jpg" alt="gorilla image" />
+  <figcaption>
+    <h3>TIP 3</h3>
+    <p>Use unscented toilet paper, tampons, or pads. Scented hygiene products can irritate the skin and impact your natural pH balance.</p>
+  </figcaption>
+</figure>
+
+<figure class="snip1543">
+  <img src="image/water.jpg" alt="zebra image" />
+  <figcaption>
+    <h3>TIP 4</h3>
+    <p>Drink enough liquids. This can help wash out your urinary tract and help prevent infections, like vaginal candidiasis.</p>
+  </figcaption>
+</figure>
+
+<figure class="snip1543"><img src="image/track.jpg" alt="peacock image" />
+  <figcaption>
+    <h3>TIP 5</h3>
+    <p>Track and monitor your period. Your menstrual cycle is a valuable marker for your overall health. Irregular periods can be a sign of conditions like diabetes, thyroid dysfunction, and celiac disease. You can track your period on a calendar or with an app on your phone designed for this purpose.
+  </figcaption>
+</figure>
+
+<figure class="snip1543">
+  <img src="image/doc.jpg" alt="sample108" />
+  <figcaption>
+    <h3>TIP 6</h3>
+    <p>Visit a healthcare provider for your annual check-up. An annual well-woman exam is a full check-up that includes a pap smear, a pelvic exam, and a breast exam. These exams are essential for good reproductive health as they can catch early signs of cancer or other health issues.</p>
+  </figcaption>
+</figure>
+<script src="index.js"></script>
+
+</body>
+</html>

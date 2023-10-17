@@ -1,0 +1,28 @@
+body{
+  color:whitesmoke;
+  font-weight: bold;
+  background: linear-gradient(#c31432,#240b36);
+}
+.para{
+  color:whitesmoke;
+  font-weight: bold;
+    text-align: justify; /* Aligns the text to justify (both left and right) */
+    font-size: 18px; /* Increases the font size to 18 pixels */
+ /* font-weight: bold;  Makes the text bold */
+ margin-top: 20px; 
+ margin-bottom: 10px; /* Adds some bottom margin to the paragraph */
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
